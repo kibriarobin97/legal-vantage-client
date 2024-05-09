@@ -62,7 +62,7 @@ const Register = () => {
     }
 
     return (
-        <div className="max-w-md mx-auto min-h-[calc(100vh-353px)] p-8 space-y-3 rounded-xl text-black">
+        <div className="max-w-md mx-auto min-h-[calc(100vh-264px)] p-8 space-y-3 rounded-xl text-black">
             {/* <Helmet>
                 <title>Residential Roosts | Register</title>
             </Helmet> */}
