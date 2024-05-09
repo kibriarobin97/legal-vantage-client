@@ -9,7 +9,9 @@ const Root = () => {
                 <NavBar></NavBar>
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+            <div className="w-full mx-auto">
+                <Footer></Footer>
+            </div>
         </div>
     );
 };
