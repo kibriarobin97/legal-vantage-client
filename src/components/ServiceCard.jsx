@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ServiceCard = ({ service }) => {
 
     const { _id, area, cost, description, photo, name, providerName, providerPhoto } = service;
-    console.log(service)
+    // console.log(service)
 
     return (
         <div className="max-w-5xl mx-auto flex shadow-md my-5">

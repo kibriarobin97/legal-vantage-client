@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
 
@@ -18,10 +18,10 @@ const ViewDetails = () => {
                             <h3 className="text-xl font-semibold">{services?.name}</h3>
                             <p className="font-semibold">Cost: ${services?.cost}</p>
                             <p className="leading-snug"><span>Description:</span>{services?.description}</p>
-                            <button className="btn text-white font-bold bg-[#83B582] hover:bg-orange-400 duration-300">Book Now</button>
+                            <Link to={`/purchase/${services?.Id}`} className="btn text-white font-bold bg-[#83B582] hover:bg-orange-400 duration-300">Book Now</Link>
                         </div>
                         <div className='border-l-2 px-5 my-2'>
-                            <h2 className='text-2xl font-bold text-gray-600 '>
+                            <h2 className='text-2xl font-bold text-gray-600 mb-5'>
                                 Provider Details:
                             </h2>
                             <div className='flex flex-col items-center gap-5'>

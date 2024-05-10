@@ -35,30 +35,11 @@ const AddService = () => {
                 icon: 'success',
                 confirmButtonText: 'ok'
             })
+            form.reset()
             // navigate('/my-posted-jobs')
         } catch (err) {
             console.log(err)
         }
-        // fetch('https://adventure-aegis-server.vercel.app/spots',{
-        //     method: "POST",
-        //     headers: {
-        //         "content-type": "application/json"
-        //     },
-        //     body: JSON.stringify(addSpot)
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //     console.log(data)
-        //     if(data.insertedId){
-        //         Swal.fire({
-        //             title: 'success!',
-        //             text: 'Successfully added this item',
-        //             icon: 'success',
-        //             confirmButtonText: 'ok'
-        //           })
-        //     }
-        //     form.reset()
-        // })
     }
 
 
