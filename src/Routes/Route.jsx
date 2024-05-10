@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Services from "../Pages/Services";
+import ViewDetails from "../Pages/ViewDetails";
 
 
 const router = createBrowserRouter([
@@ -13,11 +14,18 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch(`${import.meta.env.VITE_API_URL}/services`)
             },
             {
                 path: '/services',
-                element: <Services></Services>
+                element: <Services></Services>,
+                loader: () => fetch(`${import.meta.env.VITE_API_URL}/all-services`)
+            },
+            {
+                path: '/service-details/:id',
+                element: <ViewDetails></ViewDetails>,
+                loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/services/${params.id}`)
             },
             {
                 path: '/login',

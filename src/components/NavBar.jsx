@@ -75,7 +75,7 @@ const NavBar = () => {
                                 <img alt="User Photo" src={user?.photoURL || defaultPhoto} />
                             </div>
                         </div>
-                        <ul tabIndex={0} className="mt-3 z-10 p-2 shadow menu menu-sm dropdown-content bg-gray-400 rounded-lg w-32 mx-auto">
+                        <ul tabIndex={0} className="mt-3 z-50 p-2 shadow menu menu-sm dropdown-content bg-gray-400 rounded-lg w-32 mx-auto">
                             <li className="hover:font-bold hover:bg-[#83B582] hover:text-white rounded-md"><Link to='/myList'>
                                 {user?.displayName ? user.displayName : 'User'}
                             </Link></li>

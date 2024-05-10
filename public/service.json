@@ -1,0 +1,16 @@
+[
+    {
+        "service_image": "https://i.ibb.co/njzNhfK/scott-graham-5f-Nm-Wej4t-AA-unsplash.jpg",
+        "service_name": "Corporate Legal Consultation",
+        "service_description": "Our experienced legal team provides comprehensive consultation services tailored to meet the unique needs of your business. From entity formation to contract drafting and compliance issues, we offer expert guidance to help your business thrive in today's complex regulatory environment.",
+        "service_area": "Inside Dhaka",
+        "service_price": "500"
+    },
+    {
+        "service_image": "https://i.ibb.co/9y6FYk9/nathan-dumlao-Wr3com-VZJx-U-unsplash.jpg",
+        "service_name": "Family Law Mediation",
+        "service_description": "Navigating family disputes can be emotionally challenging. Our skilled mediators provide compassionate and effective mediation services to help families resolve conflicts amicably. Whether it's divorce mediation, child custody issues, or property division, we're here to facilitate constructive communication and reach mutually beneficial agreements.",
+        "service_area": "Inside Chittagong",
+        "service_price": "200"
+    }
+]
