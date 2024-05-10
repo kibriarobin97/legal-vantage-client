@@ -72,7 +72,9 @@ const ManageService = () => {
                                 <Link to={`/service-details/${service?._id}`}>
                                     <button type="button" className="w-full p-3 font-bold tracking-wide rounded-md bg-[#83B582] text-white hover:bg-orange-400 duration-300">Details</button>
                                 </Link>
-                                <button className="w-full p-3 font-bold tracking-wide rounded-md bg-orange-500 text-white hover:bg-orange-600 duration-300">Update</button>
+                                <Link to={`/update-service/${service?._id}`}>
+                                    <button className="w-full p-3 font-bold tracking-wide rounded-md bg-orange-500 text-white hover:bg-orange-600 duration-300">Update</button>
+                                </Link>
                                 <button onClick={() => handleDelete(service?._id)} className="w-full p-3 font-bold tracking-wide rounded-md bg-red-500 text-white hover:bg-red-600 duration-300">Delete</button>
                             </div>
                         </div>

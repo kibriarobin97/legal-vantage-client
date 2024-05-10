@@ -2,11 +2,12 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddService = () => {
 
     const { user } = useContext(AuthContext)
-    // console.log(user?.PhotoURL)
+    const navigate = useNavigate()
 
     const handleAddService = async e => {
         e.preventDefault()
@@ -31,12 +32,12 @@ const AddService = () => {
             console.log(data)
             Swal.fire({
                 title: 'success!',
-                text: 'Successfully added this service',
+                text: 'Successfully added this Service',
                 icon: 'success',
                 confirmButtonText: 'ok'
             })
             form.reset()
-            // navigate('/my-posted-jobs')
+            navigate('/manage-service')
         } catch (err) {
             console.log(err)
         }
