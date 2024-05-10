@@ -48,7 +48,9 @@ const Slider = () => {
             <div className='absolute top-0 bottom-0 z-10 bg-gradient-to-b from-[#151515] to-[rgba(21, 21, 21, 0)] md:bg-opacity-40 p-5 w-full md:max-h-[500px]'>
                 <div className='text-white text-xl md:text-3xl font-bold text-center mt-40 space-y-3'>
                     <h3 className='leading-10'>Empower Your Legal Journey with <span className='text-[#83B582]'>Legal-Vantage</span><br /> Your Trusted Partner in Legal Solutions</h3>
-                    <button className='btn bg-orange-400 hover:bg-[#83B582] duration-300 border-none text-white font-bold'>Get All Services</button>
+                    <a href="#service">
+                    <button className='btn bg-orange-400 hover:bg-[#83B582] duration-300 border-none text-white font-bold mt-4'>Get Services</button>
+                    </a>
                 </div>
             </div>
         </div>

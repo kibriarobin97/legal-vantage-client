@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/update-service/:id',
-                element: <UpdateService></UpdateService>,
+                element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
                 loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/services/${params.id}`)
             }
         ]

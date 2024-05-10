@@ -29,7 +29,7 @@ const NavBar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><NavLink to='/'  className={({ isActive }) => isActive ? "font-bold bg-[#83B582] hover:bg-[#83B582] text-white rounded-md" : "font-bold"}>Home</NavLink></li>
-                        <li><NavLink to='/services' className={({ isActive }) => isActive ? "font-bold bg-[#83B582] hover:bg-[#83B582] text-white rounded-md" : "font-bold"}>Services</NavLink></li>
+                        <li><NavLink to='/services' className={({ isActive }) => isActive ? "font-bold bg-[#83B582] hover:bg-[#83B582] text-white rounded-md" : "font-bold"}>All Services</NavLink></li>
                         {
                             user && <li>
                                 <a className="font-bold hover:bg-[#83B582] hover:text-white">Dashboard</a>
@@ -51,7 +51,7 @@ const NavBar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to='/' className={({ isActive }) => isActive ? "font-bold bg-[#83B582] hover:bg-[#83B582] text-white rounded-md" : "font-bold"}>Home</NavLink></li>
-                    <li><NavLink to='/services' className={({ isActive }) => isActive ? "font-bold bg-[#83B582] hover:bg-[#83B582] text-white rounded-md" : "font-bold"}>Services</NavLink></li>
+                    <li><NavLink to='/services' className={({ isActive }) => isActive ? "font-bold bg-[#83B582] hover:bg-[#83B582] text-white rounded-md" : "font-bold"}>All Services</NavLink></li>
                     {
                         user && <li>
                             <details>
