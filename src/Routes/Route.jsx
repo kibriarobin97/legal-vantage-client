@@ -10,12 +10,14 @@ import Purchase from "../Pages/Purchase";
 import ManageService from "../Pages/ManageService";
 import PrivateRoute from "./PrivateRoute";
 import UpdateService from "../Pages/UpdateService";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
