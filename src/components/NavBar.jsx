@@ -52,7 +52,7 @@ const NavBar = () => {
                                     <li><Link to='/add-service' className="font-bold hover:bg-[#83B582] hover:text-white">Add Service</Link></li>
                                     <li><Link to='/manage-service' className="font-bold hover:bg-[#83B582] hover:text-white">Manage Service</Link></li>
                                     <li><Link to='/booked-service'>Booked-Services</Link></li>
-                                    <li><a>Service-To-Do</a></li>
+                                    <li><Link to='/service-to-do' className="font-bold hover:bg-[#83B582] hover:text-white">Service-To-Do</Link></li>
                                 </ul>
                             </li>
                         }
@@ -75,7 +75,7 @@ const NavBar = () => {
                                     <li><Link to='/add-service' className="font-bold hover:bg-[#83B582] hover:text-white">Add Service</Link></li>
                                     <li><Link to='/manage-service' className="font-bold hover:bg-[#83B582] hover:text-white">Manage Service</Link></li>
                                     <li><Link to='/booked-service' className="font-bold hover:bg-[#83B582] hover:text-white">Booked-Services</Link></li>
-                                    <li><a>Service-To-Do</a></li>
+                                    <li><Link to='/service-to-do' className="font-bold hover:bg-[#83B582] hover:text-white">Service-To-Do</Link></li>
                                 </ul>
                             </details>
                         </li>

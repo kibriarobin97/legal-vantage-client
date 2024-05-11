@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
 
 
 const Register = () => {
@@ -14,7 +15,7 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
         const form = new FormData(e.currentTarget)
         const name = form.get('name')
@@ -35,31 +36,33 @@ const Register = () => {
         }
 
         //create user
-        createUser(email, password)
-            .then(() => {
-                updateUserProfile(name, photo)
-                    .then(() => {
-                        toast.success("Successfully created account")
-                        navigate('/')
-                    })
 
-            })
-            .catch(error => {
-                toast.error(error.message)
-            })
+        try {
+            const result = await createUser(email, password)
+            await updateUserProfile(name, photo)
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, { email: result?.user?.email }, { withCredentials: true })
+            console.log(data)
+            toast.success("Successfully created account")
+            navigate('/')
+        }
+        catch (error) {
+            toast.error(error.message)
+        }
 
     }
 
     // login with google
-    const handleGoogle = () => {
-        googleLogin()
-            .then(() => {
-                toast.success("Successfully Login with Google")
-                navigate(location?.state ? location.state : '/')
-            })
-            .catch(error => {
-                toast.error(error.message)
-            })
+    const handleGoogle = async () => {
+        try {
+            const result = await googleLogin()
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, { email: result?.user?.email }, { withCredentials: true })
+            console.log(data)
+            toast.success("Successfully Login with Google")
+            navigate(location?.state ? location.state : '/')
+        }
+        catch(error) {
+            toast.error(error.message)
+        }
     }
 
     return (

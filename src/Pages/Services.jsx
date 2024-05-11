@@ -5,7 +5,6 @@ import axios from "axios";
 
 const Services = () => {
 
-    // const services = useLoaderData()
     const [services, setServices] = useState([])
     const [search, setSearch] = useState('')
 
@@ -27,7 +26,6 @@ const Services = () => {
         const text = e.target.search.value;
         setSearch(text)
     }
-    console.log(search)
 
     return (
         <div className="min-h-[calc(100vh-264px)]">

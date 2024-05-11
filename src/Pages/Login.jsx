@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
 
 
 
@@ -17,35 +18,40 @@ const Login = () => {
     const location = useLocation()
     const navigate = useNavigate()
 
-    const handleLogin = e => {
+    const handleLogin = async e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
 
         //login user
-        loginUser(email, password)
-            .then(() => {
+        
+            try {
+                const result = await loginUser(email, password)
+                const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, { email: result?.user?.email }, { withCredentials: true })
+                console.log(data)
                 toast.success("Successfully Login")
 
                 //navigate use after login
                 navigate(location?.state ? location.state : '/')
-            })
-            .catch(() => {
+            }
+            catch(err){
                 toast.error("Incorect Email and Password")
-            })
+            }
     }
 
     // login with google
-    const handleGoogle = () => {
-        googleLogin()
-            .then(() => {
+    const handleGoogle = async () => {
+            try {
+                const result = await googleLogin()
+                const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, { email: result?.user?.email }, { withCredentials: true })
+                console.log(data)
                 toast.success("Successfully Login with Google")
                 navigate(location?.state ? location.state : '/')
-            })
-            .catch(error => {
+            }
+            catch(error) {
                 toast.error(error.message)
-            })
+            }
     }
 
 
