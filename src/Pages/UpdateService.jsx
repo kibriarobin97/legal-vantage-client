@@ -28,7 +28,7 @@ const UpdateService = () => {
         const updateService = { name, photo, area, cost, description, providerEmail, providerName, providerPhoto }
 
         try {
-            const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/services/${_id}`, updateService)
+            const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/services/${_id}`, updateService, {withCredentials: true})
             console.log(data)
             toast.success('Service Data Updated Successfully!')
             navigate('/manage-service')

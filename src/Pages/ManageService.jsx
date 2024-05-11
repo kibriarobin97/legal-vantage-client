@@ -16,7 +16,7 @@ const ManageService = () => {
     }, [user])
 
     const getData = async () => {
-        const { data } = await axios(`${import.meta.env.VITE_API_URL}/my-service/${user?.email}`)
+        const { data } = await axios(`${import.meta.env.VITE_API_URL}/my-service/${user?.email}`, {withCredentials: true})
         setServices(data)
     }
 
