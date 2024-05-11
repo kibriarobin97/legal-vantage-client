@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const AllServiceCard = ({ service }) => {
 
     const { _id, area, cost, description, photo, name, providerName, providerPhoto } = service;
-    console.log(service)
+    // console.log(service)
     return (
         <div className="max-w-6xl mx-auto flex shadow-md my-8">
             <img src={photo} alt="" className="object-cover object-center w-1/3 h-72 bg-gray-500" />
