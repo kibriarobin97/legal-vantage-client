@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 const NavBar = () => {
 
     const { user, logOut } = useContext(AuthContext)
-    console.log(user)
+    // console.log(user)
 
     const handleLogOut = () => {
         logOut()
@@ -36,7 +36,7 @@ const NavBar = () => {
                                 <ul className="p-2">
                                     <li><Link to='/add-service' className="font-bold hover:bg-[#83B582] hover:text-white">Add Service</Link></li>
                                     <li><Link to='/manage-service' className="font-bold hover:bg-[#83B582] hover:text-white">Manage Service</Link></li>
-                                    <li><a>Booked-Services</a></li>
+                                    <li><Link to='/booked-service'>Booked-Services</Link></li>
                                     <li><a>Service-To-Do</a></li>
                                 </ul>
                             </li>
@@ -59,7 +59,7 @@ const NavBar = () => {
                                 <ul className="p-1 w-40 z-50">
                                     <li><Link to='/add-service' className="font-bold hover:bg-[#83B582] hover:text-white">Add Service</Link></li>
                                     <li><Link to='/manage-service' className="font-bold hover:bg-[#83B582] hover:text-white">Manage Service</Link></li>
-                                    <li><a>Booked-Services</a></li>
+                                    <li><Link to='/booked-service' className="font-bold hover:bg-[#83B582] hover:text-white">Booked-Services</Link></li>
                                     <li><a>Service-To-Do</a></li>
                                 </ul>
                             </details>

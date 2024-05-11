@@ -11,6 +11,7 @@ import ManageService from "../Pages/ManageService";
 import PrivateRoute from "./PrivateRoute";
 import UpdateService from "../Pages/UpdateService";
 import ErrorPage from "../Pages/ErrorPage";
+import BookedService from "../Pages/BookedService";
 
 
 const router = createBrowserRouter([
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/purchase/:id',
-                element: <Purchase></Purchase>,
+                element: <PrivateRoute><Purchase></Purchase></PrivateRoute>,
                 loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/services/${params.id}`)
             },
             {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
                 path: '/update-service/:id',
                 element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
                 loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/services/${params.id}`)
+            },
+            {
+                path: '/booked-service',
+                element: <PrivateRoute><BookedService></BookedService></PrivateRoute>
             }
         ]
     }
