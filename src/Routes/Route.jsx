@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: '/purchase/:id',
                 element: <Purchase></Purchase>,
-                loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/all-services/${params.id}`)
+                loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/services/${params.id}`)
             },
             {
                 path: '/manage-service',
