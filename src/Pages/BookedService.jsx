@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const BookedService = () => {
 
@@ -20,12 +21,18 @@ const BookedService = () => {
 
     if(services.length === 0){
         return <div className="min-h-[calc(100vh-264px)] flex justify-center items-center">
+            <Helmet>
+                <title>Booked Service</title>
+            </Helmet>
         <h3 className="text-3xl font-bold text-center text-gray-400 text-opacity-70">You have no booked service</h3>
     </div>
     }
 
     return (
         <div className="min-h-[calc(100vh-264px)] my-10">
+            <Helmet>
+                <title>Booked Service</title>
+            </Helmet>
             <div className="p-2 sm:p-4 text-white">
                 <div className="overflow-x-auto">
                     <table className="min-w-full text-sm">

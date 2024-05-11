@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const AddService = () => {
 
@@ -46,6 +47,9 @@ const AddService = () => {
 
     return (
         <section className="p-6 text-gray-500 min-h-[calc(100vh-264px)]">
+            <Helmet>
+                <title>Add Service</title>
+            </Helmet>
             <h3 className="text-2xl text-black underline font-bold text-center mb-5">Add New Services</h3>
             <form
                 onSubmit={handleAddService}

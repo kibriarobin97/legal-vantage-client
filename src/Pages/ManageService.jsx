@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const ManageService = () => {
 
@@ -57,6 +58,9 @@ const ManageService = () => {
 
     return (
         <div className="min-h-[calc(100vh-264px)]">
+            <Helmet>
+                <title>Manage Service</title>
+            </Helmet>
             <h3 className="text-2xl font-bold text-center my-8">My Added Service</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-5">
                 {

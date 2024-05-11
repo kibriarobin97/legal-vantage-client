@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const UpdateService = () => {
 
@@ -37,6 +38,9 @@ const UpdateService = () => {
     }
     return (
         <div className="min-h-[calc(100vh-264px)]">
+            <Helmet>
+                <title>Update Service</title>
+            </Helmet>
             <form
                 onSubmit={handleUpdateService}
                 className="container flex flex-col mx-auto space-y-12">

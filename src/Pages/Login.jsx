@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -50,9 +51,9 @@ const Login = () => {
 
     return (
         <div className="w-full max-w-md mx-auto min-h-[calc(100vh-264px)] p-8 space-y-3 rounded-xl text-black">
-            {/* <Helmet>
-                <title>Residential Roosts | Login</title>
-            </Helmet> */}
+            <Helmet>
+                <title>Login | Legal-Vantage</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center">Please Login</h1>
             <p className="text-sm text-center text-gray-500">Login to access your account</p>
             <form

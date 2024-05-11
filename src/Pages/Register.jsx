@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -63,9 +64,9 @@ const Register = () => {
 
     return (
         <div className="max-w-md mx-auto min-h-[calc(100vh-264px)] p-8 space-y-3 rounded-xl text-black">
-            {/* <Helmet>
-                <title>Residential Roosts | Register</title>
-            </Helmet> */}
+            <Helmet>
+                <title>Register | Legal-Vantage</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center">Register Now</h1>
             <p className="text-sm text-center text-gray-500">Register to create a account</p>
             <form

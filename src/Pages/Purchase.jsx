@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const Purchase = () => {
 
@@ -44,6 +45,9 @@ const Purchase = () => {
 
     return (
         <div className="min-h-[calc(100vh-264px)]">
+            <Helmet>
+                <title>Purchase | Legal-Vantage</title>
+            </Helmet>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
                 <h2 className="text-xl font-semibold capitalize text-center my-4 underline text-black">Booking Service</h2>
 

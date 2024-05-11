@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
@@ -6,6 +7,9 @@ const ViewDetails = () => {
 
     return (
         <div className="min-h-[calc(100vh-264px)] my-10">
+            <Helmet>
+                <title>Service Details</title>
+            </Helmet>
             <div className="w-full p-4 shadow-md">
                 <div className="space-y-4">
                     <div className="space-y-2 w-full">
