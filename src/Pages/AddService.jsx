@@ -24,13 +24,13 @@ const AddService = () => {
 
         const addService = { name, photo, area, cost, description, providerEmail, providerName, providerPhoto }
 
-        console.log(addService)
+        // console.log(addService)
         try {
             const { data } = await axios.post(
                 `${import.meta.env.VITE_API_URL}/services`,
                 addService
             )
-            console.log(data)
+            // console.log(data)
             Swal.fire({
                 title: 'success!',
                 text: 'Successfully added this Service',

@@ -17,7 +17,7 @@ const BookedService = () => {
         const { data } = await axios(`${import.meta.env.VITE_API_URL}/my-booked/${user?.email}`, { withCredentials: true })
         setServices(data)
     }
-    console.log(services)
+    // console.log(services)
 
     if (services.length === 0) {
         return <div className="min-h-[calc(100vh-264px)] flex justify-center items-center">

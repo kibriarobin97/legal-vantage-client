@@ -7,8 +7,8 @@ const ServiceCard = ({ service }) => {
     // console.log(service)
 
     return (
-        <div className="max-w-5xl mx-auto flex shadow-md my-5">
-            <img src={photo} alt="" className="object-cover object-center w-1/3 h-72 bg-gray-500" />
+        <div className="max-w-5xl mx-auto md:flex shadow-md my-5 hover:scale-[1.05] transition-all">
+            <img src={photo} alt="" className="object-cover object-center w-full md:w-1/3 h-72 bg-gray-500" />
             <div className="flex flex-col flex-1 justify-between p-6 space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-2xl font-semibold tracking-wide">{name}</h2>
@@ -22,12 +22,12 @@ const ServiceCard = ({ service }) => {
                 <p className='mt-6 text-lg font-bold text-gray-600 '>
                     Provider Details:
                 </p>
-                <div className='flex flex-col items-center gap-5'>
+                <div className='flex flex-col items-center gap-5 my-4'>
                     <div className='rounded-full object-cover overflow-hidden w-20 h-20'>
                         <img src={providerPhoto} alt='' />
                     </div>
                     <div>
-                        <p className='mt-2 font-semibold text-gray-600 '>Name: {providerName}</p>
+                        <p className='mb-3 font-semibold text-gray-600 '>Name: {providerName}</p>
                     </div>
 
                 </div>
