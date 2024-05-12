@@ -1,8 +1,19 @@
-# React + Vite
+## Website Name: Legal-Vantages
+## Live Link: https://legal-vantage.web.app
+## Features: 
+1. Responsible Navbar.
+2. Attractive slider for visitors.
+3. Lots of Services and law.
+4. Comprehensive Legal Services.
+5. Comprehensive Legal Services.
+6. Proactive Legal Guidance.
+7. Details of all service.
+8. User can add service after login.
+9. User can see their added service.
+10. They can update/delete their add service.
+11. Mobile and Tablet responsive.
+12. Allover visitor friendly website.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Npm Package
+* Swiper slider
+* AOS Package

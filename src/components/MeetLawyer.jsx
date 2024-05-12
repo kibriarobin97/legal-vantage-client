@@ -15,7 +15,7 @@ const MeetLawyer = () => {
                 <p>At Legal Vantage, our team of dedicated lawyers is at the heart of everything we do.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
-                <div className="flex flex-col items-center justify-center gap-1">
+                <div data-aos="fade-right" data-aos-delay="300" className="flex flex-col items-center justify-center gap-1">
                     <div className="w-44 h-44 rounded-full"><img src={law2} alt="" className="h-44 w-44 object-cover rounded-full" /></div>
                     <h3 className="text-2xl font-bold mt-2">Henry Miller</h3>
                     <p className="text-gray-500 font-medium">Criminal Lawyer</p>
@@ -25,7 +25,7 @@ const MeetLawyer = () => {
                         <p><FaInstagramSquare className="text-orange-400 text-3xl p-1 bg-orange-500 bg-opacity-30 rounded-md" /></p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-1">
+                <div data-aos="fade-right" data-aos-duration="1000" className="flex flex-col items-center justify-center gap-1">
                     <div className="w-44 h-44 rounded-full"><img src={law1} alt="" className="h-44 w-44 object-cover rounded-full" /></div>
                     <h3 className="text-2xl font-bold mt-2"> Loretta Lynch</h3>
                     <p className="text-gray-500 font-medium">Family Lawyer</p>
@@ -35,7 +35,7 @@ const MeetLawyer = () => {
                         <p><FaInstagramSquare className="text-orange-400 text-3xl p-1 bg-orange-500 bg-opacity-30 rounded-md" /></p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-1">
+                <div data-aos="fade-left" data-aos-duration="1000" className="flex flex-col items-center justify-center gap-1">
                     <div className="w-44 h-44 rounded-full"><img src={law3} alt="" className="h-44 w-44 object-cover rounded-full" /></div>
                     <h3 className="text-2xl font-bold mt-2">Jacky Brown</h3>
                     <p className="text-gray-500 font-medium">Consumer Lawyer</p>
@@ -45,7 +45,7 @@ const MeetLawyer = () => {
                         <p><FaInstagramSquare className="text-orange-400 text-3xl p-1 bg-orange-500 bg-opacity-30 rounded-md" /></p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-1">
+                <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col items-center justify-center gap-1">
                     <div className="w-44 h-44 rounded-full"><img src={law4} alt="" className="h-44 w-44 object-cover rounded-full" /></div>
                     <h3 className="text-2xl font-bold mt-2">Ryan Anderson</h3>
                     <p className="text-gray-500 font-medium">Civil Lawyer</p>

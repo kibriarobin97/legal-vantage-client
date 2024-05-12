@@ -10,9 +10,10 @@ const PopularService = () => {
         <div id="service" className="">
             <h3 className="text-2xl font-bold text-center my-10">Popular Service</h3>
             {
-                services.map(service => <ServiceCard
+                services.map((service, idx) => <ServiceCard
                     key={service._id}
                     service={service}
+                    idx={idx}
                 ></ServiceCard>)
             }
             <div className="flex justify-center items-center mb-10">

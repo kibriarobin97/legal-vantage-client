@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const AllServiceCard = ({ service }) => {
+const AllServiceCard = ({ service, idx }) => {
 
     const { _id, area, cost, description, photo, name, providerName, providerPhoto } = service;
     // console.log(service)
     return (
-        <div className="max-w-6xl mx-auto md:flex shadow-md my-8 hover:scale-[1.05] transition-all">
+        <div
+        data-aos={idx % 2 === 0 ? 'fade-left' : 'fade-right'} data-aos-duration="1000"
+        className="max-w-6xl mx-auto md:flex shadow-md my-8 hover:scale-[1.05] transition-all">
             <img src={photo} alt="" className="object-cover object-center md:w-1/3 w-full h-72 bg-gray-500" />
             <div className="flex flex-col flex-1 justify-between p-6 space-y-8">
                 <div className="space-y-2">
@@ -35,7 +37,8 @@ const AllServiceCard = ({ service }) => {
 };
 
 AllServiceCard.propTypes = {
-    service: PropTypes.object
+    service: PropTypes.object,
+    idx: PropTypes.number
 }
 
 export default AllServiceCard;

@@ -64,7 +64,7 @@ const ManageService = () => {
             <h3 className="text-2xl font-bold text-center my-8">My Added Service</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-5">
                 {
-                    services?.map(service => <div key={service?._id} className="rounded-md shadow-md ">
+                    services?.map(service => <div key={service?._id} className="rounded-md shadow-md hover:scale-[1.05] transition-all">
                         <img src={service?.photo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />
                         <div className="flex flex-col justify-between p-6 space-y-8">
                             <div className="space-y-2">
