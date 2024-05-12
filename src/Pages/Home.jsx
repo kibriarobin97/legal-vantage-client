@@ -3,6 +3,7 @@ import PopularService from "../components/PopularService";
 import Slider from "../components/Slider";
 import ChooseUs from "../components/ChooseUs";
 import MeetLawyer from "../components/MeetLawyer";
+import Faq from "../components/Faq";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <PopularService></PopularService>
             <ChooseUs></ChooseUs>
             <MeetLawyer></MeetLawyer>
+            <Faq></Faq>
         </div>
     );
 };

@@ -24,7 +24,7 @@ const Slider = () => {
                 pagination={{
                     clickable: true,
                 }}
-                navigation={true}
+                // navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
                 autoplay={
                     { delay: 2000 }
@@ -46,7 +46,7 @@ const Slider = () => {
                 </SwiperSlide>
             </Swiper>
             <div className='absolute top-0 bottom-0 z-10 bg-gradient-to-b from-[#151515] to-[rgba(21, 21, 21, 0)] md:bg-opacity-40 p-5 w-full md:max-h-[500px]'>
-                <div className='text-white text-xl md:text-3xl font-bold text-center mt-40 space-y-3'>
+                <div className='text-white text-lg md:text-3xl font-bold text-center mt-10 lg:mt-40 space-y-3'>
                     <h3 className='leading-10'>Empower Your Legal Journey with <span className='text-[#83B582]'>Legal-Vantage</span><br /> Your Trusted Partner in Legal Solutions</h3>
                     <a href="#service">
                     <button className='btn bg-orange-400 hover:bg-[#83B582] duration-300 border-none text-white font-bold mt-4'>Get Services</button>

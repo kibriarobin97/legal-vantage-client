@@ -9,7 +9,7 @@ import law4 from "../assets/lawyer4.jpg";
 
 const MeetLawyer = () => {
     return (
-        <div className="my-8">
+        <div className="my-12">
             <div className="text-center">
                 <h3 className="text-3xl font-bold mb-2">Meet Our Lawyers</h3>
                 <p>At Legal Vantage, our team of dedicated lawyers is at the heart of everything we do.</p>
