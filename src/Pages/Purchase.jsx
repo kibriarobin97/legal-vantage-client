@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import axios from "axios";
@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 const Purchase = () => {
 
+    const navigate = useNavigate()
     const {user} = useContext(AuthContext)
     const service = useLoaderData()
     const {_id, name, photo, cost, providerEmail, providerName} = service;
@@ -35,6 +36,7 @@ const Purchase = () => {
             const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/booking`, bookingService)
             console.log(data)
             toast.success('Booking successfully')
+            navigate('/booked-service')
         }
         catch(err){
             console.log(err)
