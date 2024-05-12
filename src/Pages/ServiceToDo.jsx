@@ -78,7 +78,6 @@ const ServiceToDo = () => {
                                             <p className="font-medium">${service?.cost}</p>
                                         </td>
                                         <td className="p-3 text-black">
-                                            {/* <p className="bg-[#83B582] w-24 text-center text-white py-1 rounded-md font-medium">{service?.status}</p> */}
                                             <p className={`inline-flex font-medium items-center px-3 py-1 rounded-full gap-x-2 ${service?.status === 'Pending' &&
                                                 'bg-yellow-100/70 text-yellow-500'
                                                 } ${service?.status === 'Working' &&
@@ -91,8 +90,8 @@ const ServiceToDo = () => {
                                             <details className="bg-orange text-black ">
                                                 <summary className="flex justify-center items-center gap-1 cursor-pointer font-medium">Update <FaEdit /></summary>
                                                 <ul className="p-2 z-50">
-                                                    <li><button onClick={() => handleStatus(service?._id, 'Working')}>Working</button></li>
-                                                    <li><button onClick={() => handleStatus(service?._id, 'Complete')}>Complete</button></li>
+                                                    <li className="hover:bg-orange-400 hover:text-white font-medium"><button onClick={() => handleStatus(service?._id, 'Working')}>Working</button></li>
+                                                    <li className="hover:bg-orange-400 hover:text-white font-medium"><button onClick={() => handleStatus(service?._id, 'Complete')}>Complete</button></li>
                                                 </ul>
                                             </details>
                                         </td>
