@@ -27,10 +27,19 @@ const Services = () => {
         setSearch(text)
     }
 
+    if (services.length === 0) {
+        return <div className="min-h-[calc(100vh-264px)] flex justify-center items-center">
+            <Helmet>
+                <title>Services | Legal-Vantage</title>
+            </Helmet>
+            <h3 className="text-3xl font-bold text-center text-gray-400 text-opacity-70">No Service Matched</h3>
+        </div>
+    }
+
     return (
         <div className="min-h-[calc(100vh-264px)]">
             <Helmet>
-                <title>Service | Legal-Vantage</title>
+                <title>Services | Legal-Vantage</title>
             </Helmet>
 
             <form onSubmit={handleSearch}>
