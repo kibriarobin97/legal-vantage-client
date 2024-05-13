@@ -40,7 +40,7 @@ const Services = () => {
                 <Helmet>
                     <title>Services | Legal-Vantage</title>
                 </Helmet>
-                <h3 className="text-3xl font-bold text-center text-gray-400 text-opacity-70">No Service Matched</h3>
+                <h3 className="text-3xl font-bold text-center text-gray-400 text-opacity-70">No Service Found</h3>
             </div>
         </div>
     }
