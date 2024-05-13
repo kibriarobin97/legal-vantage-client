@@ -30,7 +30,7 @@ const AddService = () => {
                 `${import.meta.env.VITE_API_URL}/services`,
                 addService
             )
-            // console.log(data)
+            console.log(data)
             Swal.fire({
                 title: 'success!',
                 text: 'Successfully added this Service',

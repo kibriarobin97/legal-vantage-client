@@ -1,5 +1,6 @@
 ## Website Name: Legal-Vantages
 ## Live Link: https://legal-vantage.web.app
+## Category: Consultation Services by Lawyers
 ## Features: 
 1. Responsible Navbar.
 2. Attractive slider for visitors.
