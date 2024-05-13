@@ -8,9 +8,9 @@ import { Helmet } from "react-helmet-async";
 const Purchase = () => {
 
     const navigate = useNavigate()
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const service = useLoaderData()
-    const {_id, name, photo, cost, providerEmail, providerName} = service;
+    const { _id, name, photo, cost, providerEmail, providerName } = service;
 
     const handleBookingService = async e => {
         e.preventDefault()
@@ -32,13 +32,13 @@ const Purchase = () => {
         const bookingService = {
             serviceId, serviceName, ServicePhoto, userEmail, userName, cost, takingDate, instruction, providerName, providerEmail, status
         }
-        try{
-            const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/booking`, bookingService)
+        try {
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/booking`, bookingService)
             console.log(data)
             toast.success('Booking successfully')
             navigate('/booked-service')
         }
-        catch(err){
+        catch (err) {
             console.log(err)
             toast.error(err.message)
         }
@@ -52,51 +52,54 @@ const Purchase = () => {
             </Helmet>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
                 <h2 className="text-xl font-semibold capitalize text-center my-4 underline text-black">Booking Service</h2>
-
+                <div className="w-full flex justify-center items-center">
+                    <img src={photo} alt="" className="w-1/2 h-40 object-cover border-orange-400 border-2 p-1" />
+                </div>
                 <form onSubmit={handleBookingService}>
                     <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                         <div>
                             <label className="text-black font-medium" >ServiceId</label>
-                            <input disabled type="text" name="serviceId" defaultValue={_id} className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input disabled type="text" name="serviceId" defaultValue={_id} className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
                             <label className="text-black font-medium" >Service Name</label>
-                            <input type="text" name="serviceName" defaultValue={name} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
-                        </div>
-
-                        <div>
-                            <label className="text-black font-medium">Service Image</label>
-                            <input type="text" name="photo" defaultValue={photo} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="text" name="serviceName" defaultValue={name} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
                             <label className="text-black font-medium" >User Email</label>
-                            <input type="email" name="userEmail" defaultValue={user?.email} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="email" name="userEmail" defaultValue={user?.email} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
+
                         <div>
                             <label className="text-black font-medium" >User Name</label>
-                            <input type="text" name="userName" defaultValue={user?.displayName} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="text" name="userName" defaultValue={user?.displayName} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
+
                         <div>
                             <label className="text-black font-medium" >Cost</label>
-                            <input type="number" name="cost" defaultValue={cost} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="number" name="cost" defaultValue={cost} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
+
                         <div>
                             <label className="text-black font-medium" >Taking Date</label>
-                            <input type="date" name="date" className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="date" name="date" className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
+
                         <div className="col-span-full">
                             <label htmlFor="bio" className="text-black font-medium">Special Instruction</label>
                             <textarea id="bio" name="instruction" placeholder="Instruction" className="w-full p-2 mt-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-black focus:dark:ring-violet-600 border border-gray-200 dark:border-gray-300"></textarea>
                         </div>
+
                         <div>
                             <label className="text-black font-medium" >Provider Name</label>
-                            <input type="text" name="providerName" defaultValue={providerName} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="text" name="providerName" defaultValue={providerName} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
+                        
                         <div>
                             <label className="text-black font-medium" >Provider Email</label>
-                            <input type="email" name="providerEmail" defaultValue={providerEmail} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                            <input type="email" name="providerEmail" defaultValue={providerEmail} disabled className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-100 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
                     </div>
 
